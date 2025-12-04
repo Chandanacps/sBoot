@@ -20,7 +20,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
+                    archiveArtifacts artifacts: 'target/**.war', followSymlinks: false
                     junit testResults: 'target/surefire-reports/*.xml'
                 }
             }
